@@ -9,7 +9,7 @@ from dataset import OptimizedNuScenesDataset
 from models import BEVOccupancyModel
 
 # --- CONFIG ---
-DATAROOT = '/media/rudra-modi/shared data/Coding/Projects/MAHE/data/nuscenes/'
+DATAROOT = '/path/to/nuscenes/'
 WEIGHTS = 'LSS_BEV_MODEL_400.pth' # FIXED: Pointing to your new LSS weights
 
 def generate_heatmap_video():
