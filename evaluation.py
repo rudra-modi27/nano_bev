@@ -11,7 +11,7 @@ from models import BEVOccupancyModel
 # ==========================================
 # CONFIGURATION - THE COMPREHENSIVE EXAM
 # ==========================================
-DATAROOT = '/media/rudra-modi/shared data/Coding/Projects/MAHE/data/nuscenes/' 
+DATAROOT = '/path/to/nuscenes/' 
 WEIGHTS = 'LSS_BEV_MODEL_400.pth' # FIXED: Must use LSS weights for this architecture
 BATCH_SIZE = 1 
 CONFIDENCE_THRESHOLD = 0.15 
