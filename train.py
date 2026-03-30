@@ -14,7 +14,7 @@ from utils import calculate_iou, distance_weighted_focal_dice_loss, depth_distil
 # ==========================================
 # CONFIGURATION - THE LABORATORY
 # ==========================================
-DATAROOT = '/media/rudra-modi/shared data/Coding/Projects/MAHE/data/nuscenes/'
+DATAROOT = '/path/to/nuscenes/'
 PREVIOUS_WEIGHTS = 'weights.pth' 
 BATCH_SIZE = 1 # CRITICAL: Keeps your 4GB VRAM safe
 EPOCHS = 5
