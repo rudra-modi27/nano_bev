@@ -6,7 +6,7 @@ from dataset import OptimizedNuScenesDataset
 from models import BEVOccupancyModel
 
 # --- CONFIG ---
-DATAROOT = '/media/rudra-modi/shared data/Coding/Projects/MAHE/data/nuscenes/'
+DATAROOT = '/path/to/nuscenes/'
 WEIGHTS = 'LSS_BEV_MODEL_400.pth' 
 
 def generate_game_map_video():
