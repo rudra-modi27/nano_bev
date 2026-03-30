@@ -13,7 +13,7 @@ DATAROOT = '/media/rudra-modi/shared data/Coding/Projects/MAHE/data/nuscenes/'
 WEIGHTS = 'LSS_BEV_MODEL_400.pth' # FIXED: Pointing to your new LSS weights
 
 def generate_heatmap_video():
-    print("🔍 Preparing 'Honest' LSS Heatmap Video...")
+    print("Preparing 'Honest' LSS Heatmap Video...")
     nusc = NuScenes(version='v1.0-mini', dataroot=DATAROOT, verbose=False)
     
     scene_token = nusc.scene[0]['token']
@@ -22,9 +22,9 @@ def generate_heatmap_video():
     model = BEVOccupancyModel(unfreeze_backbone=False).cuda()
     try:
         model.load_state_dict(torch.load(WEIGHTS))
-        print("✅ LSS Weights loaded successfully.")
+        print("LSS Weights loaded successfully.")
     except Exception as e:
-        print(f"❌ Error loading weights: {e}")
+        print(f"Error loading weights: {e}")
         return
 
     model.eval()
@@ -32,7 +32,7 @@ def generate_heatmap_video():
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     out = cv2.VideoWriter('honest_lss_drive.mp4', fourcc, 10.0, (1600, 800))
 
-    print(f"🎬 Processing {len(dataset)} frames...")
+    print(f"Processing {len(dataset)} frames...")
     
     with torch.no_grad():
         for i in range(len(dataset)):
@@ -83,7 +83,7 @@ def generate_heatmap_video():
             out.write(upscaled)
             
     out.release()
-    print("✅ Honest Video saved as 'honest_lss_drive.mp4'!")
+    print("Honest Video saved as 'honest_lss_drive.mp4'!")
 
 if __name__ == "__main__":
     generate_heatmap_video()
